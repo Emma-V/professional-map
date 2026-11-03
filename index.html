@@ -1,0 +1,315 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>המפה המקצועית שלי</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;600;700&family=Secular+One&display=swap">
+<style>
+/* Layout: one reading column, right-to-left; summary first, then four working tables, then a plan. Her four marker colors are the semantic system. */
+:root{
+  --bg:#F5F6F8; --surface:#FFFFFF; --fg:#1C2230; --muted:#5A6378; --line:#DCE0E8;
+  --accent:#3B3F9E;
+  --y:#F3D34A; --y-soft:#FBF1C2; --y-ink:#5C4A00;
+  --g:#1F8A4C; --g-soft:#DDF2E5;
+  --b:#2462B8; --b-soft:#DCE8F8;
+  --r:#C23B3B; --r-soft:#F8DEDE;
+  --n:#9AA2B3; --n-soft:#ECEEF2;
+  --display:"Secular One","IBM Plex Sans Hebrew",Arial,sans-serif;
+  --body:"IBM Plex Sans Hebrew","Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12151C; --surface:#1A1F29; --fg:#E7EAF0; --muted:#9AA3B5; --line:#2C3340;
+  --accent:#9EA3F5;
+  --y:#E2C23A; --y-soft:#3A3315; --y-ink:#F3DE84;
+  --g:#4CC27D; --g-soft:#173426;
+  --b:#6EA4F0; --b-soft:#182A44;
+  --r:#EE7474; --r-soft:#3D1D1F;
+  --n:#6B7385; --n-soft:#252B36; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12151C; --surface:#1A1F29; --fg:#E7EAF0; --muted:#9AA3B5; --line:#2C3340;
+  --accent:#9EA3F5;
+  --y:#E2C23A; --y-soft:#3A3315; --y-ink:#F3DE84;
+  --g:#4CC27D; --g-soft:#173426;
+  --b:#6EA4F0; --b-soft:#182A44;
+  --r:#EE7474; --r-soft:#3D1D1F;
+  --n:#6B7385; --n-soft:#252B36; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.65}
+.wrap{direction:rtl;max-width:980px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:44px}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.25}
+h1{font-size:clamp(28px,5vw,40px)}
+h2{font-size:24px}
+h3{font-size:18px}
+p{margin:0;max-width:68ch}
+.lede{color:var(--muted);font-size:17px}
+section{display:flex;flex-direction:column;gap:16px}
+.eyebrow{font-size:13px;letter-spacing:.04em;color:var(--accent);font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap}
+.chip::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.c-y{background:var(--y-soft);color:var(--y-ink)} .c-y::before{background:var(--y)}
+.c-g{background:var(--g-soft);color:var(--g)}
+.c-b{background:var(--b-soft);color:var(--b)}
+.c-r{background:var(--r-soft);color:var(--r)}
+.c-n{background:var(--n-soft);color:var(--muted)}
+.c-a{background:var(--n-soft);color:var(--accent)}
+.takeaways{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.tk{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tk b{font-size:16px}
+.tk span{color:var(--muted);font-size:15px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:15px}
+th,td{text-align:right;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:13px;color:var(--muted);font-weight:600;background:var(--n-soft)}
+tr:last-child td{border-bottom:0}
+td .sub{display:block;color:var(--muted);font-size:13.5px;margin-top:2px}
+.bar{display:flex;height:12px;border-radius:6px;overflow:hidden;width:150px;margin-top:4px;background:var(--n-soft)}
+.bar i{display:block;height:100%}
+.bar .g{background:var(--g)} .bar .b{background:var(--b)} .bar .r{background:var(--r)} .bar .n{background:var(--n)}
+.nums{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:4px}
+.dots{letter-spacing:2px;color:var(--y);font-size:16px}
+.dots .off{color:var(--line)}
+.verdict{font-weight:700}
+.callout{border-inline-start:4px solid var(--r);background:var(--surface);border-radius:0 10px 10px 0;padding:16px 20px;display:flex;flex-direction:column;gap:8px}
+.callout.blue{border-inline-start-color:var(--accent)}
+.profile{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.pcol{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.pcol ul{margin:0;padding-inline-start:18px;display:flex;flex-direction:column;gap:6px}
+.pcol li{font-size:15px}
+.role{background:var(--surface);border:2px solid var(--accent);border-radius:12px;padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.role .title{font-family:var(--display);font-size:22px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.step .when{font-size:13px;color:var(--accent);font-weight:700}
+.step ul{margin:0;padding-inline-start:18px;display:flex;flex-direction:column;gap:5px;font-size:15px}
+ol.qs{margin:0;padding-inline-start:22px;display:flex;flex-direction:column;gap:6px}
+.foot{color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);padding-top:16px}
+code{font-family:ui-monospace,Menlo,monospace;font-size:.92em;direction:ltr;unicode-bidi:isolate}
+</style>
+
+<div class="wrap" lang="he" dir="rtl">
+
+<header style="display:flex;flex-direction:column;gap:12px">
+  <div class="eyebrow">ניתוח ייעוץ תעסוקתי · 4 משרות · נובמבר 2026</div>
+  <h1>המפה המקצועית שלי</h1>
+  <p class="lede">קראתי את ארבע המשרות שסימנת: Noma Security (AI Builder), FMR (AI Enablement), קבוצת יעל (מנהלת שינוי AI) ו־QualityAI (Data Scientist). ספרתי כל סימון, חיפשתי דפוסים בין המשרות, ובדקתי גם את הסימונים עצמם. המטרה היא לא רק לראות "איפה אני עומדת", אלא להבין מה הנתונים אומרים עלייך.</p>
+  <div class="legend">
+    <span class="chip c-y">צהוב · מעניין אותי</span>
+    <span class="chip c-g">ירוק · עומדת בזה</span>
+    <span class="chip c-b">כחול · יכולה ללמוד</span>
+    <span class="chip c-r">אדום · אין דרך לשנות</span>
+    <span class="chip c-n">אפור · לא סימנת</span>
+  </div>
+</header>
+
+<section>
+  <h2>השורה התחתונה</h2>
+  <div class="takeaways">
+    <div class="tk"><b>את מפתחת שרוצה לבנות כלי AI לאנשים אמיתיים</b><span>הצהוב מתרכז בבנייה של סוכנים, MCP ואוטומציות, בתרגום צורך עמום לפתרון, ובהדרכה של אחרים. הוא כמעט לא מופיע על שיווק, פוליטיקה ארגונית או תשתיות.</span></div>
+    <div class="tk"><b>שתי משרות קרובות מאוד, שתיים רחוקות</b><span>FMR ו־Noma מתאימות גם לעניין וגם לנתונים. מנהלת שינוי ו־Data Scientist חסומות בתואר ובשנות ניסיון בתחום אחר.</span></div>
+    <div class="tk"><b>חלק גדול מהאדום הוא בעצם כחול</b><span>סימנת באדום דברים כמו n8n, Python ברמה גבוהה וניהול סודות. אלה נלמדים בשבועות. הפער האמיתי שלך קטן ממה שהמסמך מראה.</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>טבלה 1 · התאמה לכל משרה</h2>
+  <p class="lede">העמודה "דרישות חובה" סופרת רק את דרישות החובה (בלי "יתרון"). הנקודות הצהובות מראות כמה מתחומי האחריות סימנת כמעניינים.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>משרה</th><th>עניין</th><th>דרישות חובה</th><th>מה באמת חוסם</th><th>ההערכה שלי</th></tr></thead>
+    <tbody>
+    <tr>
+      <td><b>FMR</b><span class="sub">AI Enablement: הטמעת AI בצוותי פיתוח</span></td>
+      <td><span class="dots">●●●●<span class="off">●</span></span><span class="sub">כמעט כל תחומי האחריות צהובים: Prompts, Agents, Skills, סדנאות</span></td>
+      <td><div class="bar"><i class="g" style="width:60%"></i><i class="b" style="width:20%"></i><i class="r" style="width:20%"></i></div><div class="nums">6 ירוק · 2 כחול · 2 אדום</div></td>
+      <td>שנתיים בתפקיד רוחבי, וניסיון בהובלת הטמעת AI. שניהם ניסיון שאפשר להתחיל לצבור כבר עכשיו בעבודה הנוכחית.</td>
+      <td><span class="verdict" style="color:var(--g)">ההתאמה הכי גבוהה</span><span class="sub">כדאי להגיש כבר עכשיו. 6 מ־10 דרישות חובה ירוקות.</span></td>
+    </tr>
+    <tr>
+      <td><b>Noma Security</b><span class="sub">AI Builder: סוכנים, MCP ואוטומציות פנימיות</span></td>
+      <td><span class="dots">●●●●●</span><span class="sub">המשרה עם הכי הרבה צהוב במסמך</span></td>
+      <td><div class="bar"><i class="g" style="width:40%"></i><i class="b" style="width:30%"></i><i class="r" style="width:30%"></i></div><div class="nums">4 ירוק · 3 כחול · 3 אדום</div></td>
+      <td>שלושת האדומים (Python ברמה גבוהה, n8n/Zapier, ניהול סודות) הם כולם דברים שנלמדים. בפועל: 0 חסמים קבועים.</td>
+      <td><span class="verdict" style="color:var(--g)">גבוהה, אחרי 2–3 חודשי למידה</span><span class="sub">זו משרת החלומות לפי הצהוב. היעד השני.</span></td>
+    </tr>
+    <tr>
+      <td><b>QualityAI</b><span class="sub">Data Scientist: RAG, Embeddings, LLM מקומי</span></td>
+      <td><span class="dots">●●●●<span class="off">●</span></span><span class="sub">עניין גבוה בטכנולוגיה עצמה</span></td>
+      <td><div class="bar"><i class="b" style="width:50%"></i><i class="r" style="width:20%"></i><i class="n" style="width:30%"></i></div><div class="nums">0 ירוק · 5 כחול · 2 אדום · 3 לא סומנו</div></td>
+      <td>תואר במדמ"ח/סטטיסטיקה ושנתיים ניסיון ב־ML. בנוסף סיווג ביטחוני ועבודה בלוד אצל הלקוח (לא סימנת אותם).</td>
+      <td><span class="verdict" style="color:var(--b)">לא עכשיו</span><span class="sub">הנושאים כן. התפקיד לא. אפשר לקחת ממנו את הטכנולוגיה לפרויקט אישי.</span></td>
+    </tr>
+    <tr>
+      <td><b>קבוצת יעל</b><span class="sub">מנהלת שינוי והטמעת AI, ארגון רפואי</span></td>
+      <td><span class="dots">●●<span class="off">●●●</span></span><span class="sub">צהוב רק על AI, פרודוקטיביות ומדידה. לא על שיווק, הסברה ושטח</span></td>
+      <td><div class="bar"><i class="r" style="width:33%"></i><i class="n" style="width:67%"></i></div><div class="nums">3 אדום · 6 לא סומנו (כישורים רכים)</div></td>
+      <td>שלוש דרישות החובה הקשות אדומות: תואר, שנתיים בניהול שינוי AI, ו־3+ שנים בניהול שינוי.</td>
+      <td><span class="verdict" style="color:var(--r)">לא מתאים</span><span class="sub">זה תפקיד לא־טכני. הסימונים שלך מראים שאת רוצה להישאר hands-on.</span></td>
+    </tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>טבלה 2 · מי את לפי הנתונים</h2>
+  <p class="lede">איחדתי את כל הסימונים מכל ארבע המשרות לדפוסים. כאן הלמידה האמיתית על עצמך.</p>
+  <div class="profile">
+    <div class="pcol">
+      <span class="chip c-g" style="align-self:flex-start">החוזקות שלך (ירוק)</span>
+      <ul>
+        <li>5+ שנות ניסיון בפיתוח תוכנה</li>
+        <li>עבודה עם API של מודלי שפה (Claude, OpenAI)</li>
+        <li>אינטגרציות: REST, Webhooks, תהליכים אסינכרוניים</li>
+        <li>כלי AI לפיתוח: Copilot, Cursor, Claude Code</li>
+        <li>שפת תכנות, Git, תהליכי פיתוח מודרניים</li>
+        <li>הדרכה, הצגה ותיעוד טכני למפתחים</li>
+        <li>בניית פלטפורמות ואוטומציות פנימיות</li>
+        <li>עצמאות, אחריות מקצה לקצה, מהירות ושיפור לפי משוב</li>
+      </ul>
+    </div>
+    <div class="pcol">
+      <span class="chip c-y" style="align-self:flex-start">מה מדליק אותך (צהוב)</span>
+      <ul>
+        <li><b>לבנות:</b> סוכני LLM, שרתי MCP, אוטומציות ו־Skills</li>
+        <li><b>מאפס ומקצה לקצה:</b> להקים תחום חדש</li>
+        <li><b>לתרגם צורך עמום</b> לפתרון מעשי וקל לתחזוקה</li>
+        <li><b>אנשים:</b> משוב ממשתמשי קצה, פרודוקטיביות של עובדים</li>
+        <li><b>להנגיש:</b> Best Practices, סדנאות, הדרכה</li>
+        <li><b>למדוד:</b> Evals, מדידת אימוץ ושיפור</li>
+        <li><b>עומק GenAI:</b> RAG, Embeddings, LLM מקומי</li>
+      </ul>
+    </div>
+    <div class="pcol">
+      <span class="chip c-n" style="align-self:flex-start">מה לא סימנת כמעניין</span>
+      <ul>
+        <li>שיווק, הסברה ותקשורת פנים־ארגונית</li>
+        <li>נוכחות בשטח ועבודה פוליטית מול הנהלות</li>
+        <li>הקשחת תשתיות: Gateway, Vault, ניהול גרסאות</li>
+        <li>DevOps וענן כמטרה בפני עצמה</li>
+        <li>כלים ספציפיים לצוות מכירות (Salesforce)</li>
+      </ul>
+      <p style="font-size:14px;color:var(--muted)">גם מה שלא צבעת זה מידע. נראה שאת נמשכת לחלק שבו בונים ופוגשים משתמשים, ופחות לצנרת ולפוליטיקה.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>טבלה 3 · בדיקה מחדש של האדום</h2>
+  <div class="callout">
+    <b>זה הממצא הכי חשוב בניתוח.</b>
+    <p>לפי ההגדרה שלך, אדום זה "אין לי דרך לשנות". אבל רוב מה שסימנת באדום ניתן לשינוי. יש גם סתירה פנימית: "ניסיון ב־MCP" סימנת בכחול אצל Noma, ו"ניסיון בבניית Agents, Skills, MCP" באדום אצל FMR. זו אותה מיומנות. כשמסמנים יותר מדי באדום, משרות טובות נראות רחוקות מכפי שהן באמת.</p>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>הדרישה שסימנת באדום</th><th>איפה</th><th>הסיווג המתוקן</th><th>זמן משוער</th><th>איך סוגרים</th></tr></thead>
+    <tbody>
+      <tr><td>ניסיון ב־n8n / Make / Zapier</td><td>Noma</td><td><span class="chip c-b">כחול</span></td><td>1–2 שבועות</td><td>לבנות 2–3 תהליכים אמיתיים ב־n8n (גרסה חינמית), למשל סיכום מיילים ל־Slack</td></tr>
+      <tr><td>Python ברמה גבוהה, קוד Production</td><td>Noma</td><td><span class="chip c-b">כחול</span></td><td>6–10 שבועות</td><td>יש לך כבר שפת תכנות (ירוק ב־FMR). Python נלמדת מהר דרך פרויקט אחד רציני עם בדיקות, typing ו־linting</td></tr>
+      <tr><td>ניהול סודות ואבטחה באוטומציות</td><td>Noma</td><td><span class="chip c-b">כחול</span></td><td>2–3 שבועות</td><td>Secret Manager, משתני סביבה, OAuth scopes, הרשאות מינימליות. ליישם בפרויקט</td></tr>
+      <tr><td>ניסיון בבניית Agents, Skills, MCP, Evals</td><td>FMR</td><td><span class="chip c-b">כחול</span></td><td>1–2 חודשים</td><td>זה גם צהוב אצלך. פרויקט הדגל בתוכנית למטה סוגר את כל הארבעה</td></tr>
+      <tr><td>ניטור פתרונות GenAI ב־Production</td><td>QualityAI</td><td><span class="chip c-b">כחול</span></td><td>חלק מהפרויקט</td><td>אותה מיומנות כמו Evals, שסימנת בכחול אצל Noma</td></tr>
+      <tr><td>הובלת אימוץ פנימי של כלי AI ומדידת השפעה</td><td>Noma, FMR</td><td><span class="chip c-a">ניסיון שנצבר</span></td><td>3–6 חודשים</td><td>ליזום בעבודה הנוכחית: סדנה לצוות, מסמך Best Practices, ומדידה לפני ואחרי</td></tr>
+      <tr><td>הובלת תוכנית פנימית, Roadmap ומדדים</td><td>FMR</td><td><span class="chip c-a">ניסיון שנצבר</span></td><td>3–6 חודשים</td><td>אותה יוזמה, עם Roadmap כתוב ומדדים</td></tr>
+      <tr><td>שנתיים בתפקיד רוחבי (Tech Lead, Platform, DevEx)</td><td>FMR</td><td><span class="chip c-a">ניסיון שנצבר</span></td><td>1–2 שנים</td><td>חלקית דרך היוזמה. וגם: חברות לא תמיד עומדות על זה. 6/10 ירוק מספיק כדי להגיש</td></tr>
+      <tr><td>רקע בסייבר או B2B SaaS</td><td>Noma (יתרון)</td><td><span class="chip c-a">תלוי מעסיק</span></td><td>מגיע עם התפקיד</td><td>רק יתרון. ללמוד את OWASP Top 10 for LLM ייתן לך שפה משותפת עם חברת אבטחת AI</td></tr>
+      <tr><td>תואר ראשון / M.A. / Ph.D.</td><td>יעל, QualityAI</td><td><span class="chip c-r">אדום בטווח הקצר</span></td><td>3+ שנים</td><td>לא נדרש בשתי משרות היעד. אם בעתיד תרצי לכיוון Data Science, זה יחזור</td></tr>
+      <tr><td>שנתיים ניסיון ב־ML / Data Science</td><td>QualityAI</td><td><span class="chip c-r">אדום בטווח הקצר</span></td><td>דורש החלפת תפקיד</td><td>לא הכיוון המומלץ כרגע</td></tr>
+      <tr><td>2–3 שנות ניסיון בניהול שינוי</td><td>יעל</td><td><span class="chip c-r">אדום בטווח הקצר</span></td><td>דורש החלפת מקצוע</td><td>לא הכיוון שלך לפי הצהוב</td></tr>
+    </tbody>
+  </table></div>
+  <p>הסיכום: מתוך 12 האדומים, 5 הם בעצם כחול, 4 הם ניסיון שאפשר להתחיל לצבור עכשיו, ורק 3 הם חסם אמיתי. ושלושת אלה נמצאים במשרות שגם ככה פחות מתאימות לך.</p>
+</section>
+
+<section>
+  <h2>טבלה 4 · מה ללמוד, לפי סדר עדיפות</h2>
+  <p class="lede">כל הכחולים (כולל האדומים שעברו לכחול), מסודרים לפי כמה משרות דורשות אותם וכמה הם מעניינים אותך.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>עדיפות</th><th>מיומנות</th><th>מופיעה ב־</th><th>מעניין אותך?</th><th>למה עכשיו</th></tr></thead>
+    <tbody>
+      <tr><td><b>1</b></td><td>MCP: בנייה ושילוב של שרתים</td><td>Noma, FMR</td><td><span class="chip c-y">כן</span></td><td>הסטנדרט החדש לחיבור סוכנים לכלים. מעט אנשים יודעים לבנות אותו היטב</td></tr>
+      <tr><td><b>1</b></td><td>Evals: מדידת איכות של סוכנים ו־LLM</td><td>Noma, FMR, QualityAI</td><td><span class="chip c-y">כן</span></td><td>מופיע בשלוש משרות. מה שמבדיל בין מי שמשחק עם AI למי שמעלה ל־Production</td></tr>
+      <tr><td><b>1</b></td><td>Python ברמת Production</td><td>Noma, QualityAI</td><td><span class="chip c-n">ניטרלי</span></td><td>שפת ברירת המחדל של עולם ה־AI</td></tr>
+      <tr><td><b>2</b></td><td>פריימוורקים לסוכנים (LangGraph וכד׳)</td><td>Noma, FMR</td><td><span class="chip c-y">כן</span></td><td>להכיר אחד לעומק, לא את כולם</td></tr>
+      <tr><td><b>2</b></td><td>RAG, Embeddings, Prompt Engineering</td><td>FMR, QualityAI</td><td><span class="chip c-y">כן</span></td><td>ידע בסיסי שנשאל עליו בראיונות</td></tr>
+      <tr><td><b>2</b></td><td>n8n / Zapier, ניהול סודות</td><td>Noma</td><td><span class="chip c-n">ניטרלי</span></td><td>מהיר ללמוד, הופך שני אדומים לירוקים</td></tr>
+      <tr><td><b>3</b></td><td>CI/CD, Docker, ענן</td><td>FMR, QualityAI</td><td><span class="chip c-n">ניטרלי</span></td><td>מספיק ברמה שמאפשרת להעלות את הפרויקט שלך לאוויר</td></tr>
+      <tr><td><b>3</b></td><td>אבטחה ופרטיות ב־AI</td><td>FMR, Noma</td><td><span class="chip c-n">ניטרלי</span></td><td>יתרון ברור במיוחד ל־Noma</td></tr>
+      <tr><td><b>4</b></td><td>LLM מקומי (Ollama)</td><td>QualityAI</td><td><span class="chip c-y">כן</span></td><td>לא נדרש ביעדים, אבל מעניין אותך וזול להוסיף לפרויקט</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>התפקיד שהנתונים מצביעים עליו</h2>
+  <div class="role">
+    <div class="eyebrow">יעד מומלץ</div>
+    <div class="title">מפתחת AI פנימית / AI Enablement Engineer</div>
+    <p>מישהי שבונה סוכנים, אוטומציות ושרתי MCP לצוותים בתוך הארגון, יושבת עם המשתמשים, מבינה מה הם צריכים, מודדת אם זה עובד ומלמדת אותם להשתמש. זה מחבר את החוזקות שלך (פיתוח, אינטגרציות, הדרכה) עם מה שמעניין אותך (לבנות מאפס, אנשים, מדידה).</p>
+    <p style="font-size:15px;color:var(--muted)">שמות משרה לחפש:</p>
+    <div class="tags">
+      <span class="chip c-a">AI Builder</span><span class="chip c-a">AI Enablement</span><span class="chip c-a">Applied AI Engineer</span><span class="chip c-a">AI Automation Engineer</span><span class="chip c-a">GenAI Developer</span><span class="chip c-a">Developer Productivity / DevEx</span><span class="chip c-a">Forward Deployed Engineer</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>תוכנית פעולה</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="when">שבועות 1–8</div>
+      <h3>פרויקט דגל אחד</h3>
+      <ul>
+        <li>לבנות ב־Python שרת MCP וסוכן שפותרים בעיה אמיתית (בעבודה או אצל מכר)</li>
+        <li>להוסיף סט Evals: דיוק, הזיות, בדיקות נסיגה</li>
+        <li>סודות מנוהלים נכון, CI ב־GitHub Actions, Docker</li>
+        <li>תהליך n8n אחד שמחבר אותו ל־Slack</li>
+        <li>README טוב ב־GitHub. זה תיק העבודות שלך</li>
+      </ul>
+    </div>
+    <div class="step">
+      <div class="when">חודשים 2–6</div>
+      <h3>להפוך אדום לירוק בעבודה הנוכחית</h3>
+      <ul>
+        <li>להציע יוזמת AI לצוות: סדנה על Claude Code / Cursor</li>
+        <li>לכתוב מסמך Best Practices ו־Skills לצוות</li>
+        <li>למדוד אימוץ לפני ואחרי (שימוש, זמן, שביעות רצון)</li>
+        <li>לכתוב Roadmap קצר. זה הניסיון שחסר ל־FMR</li>
+      </ul>
+    </div>
+    <div class="step">
+      <div class="when">מעכשיו</div>
+      <h3>להגיש</h3>
+      <ul>
+        <li>משרות כמו FMR: כבר עכשיו. דרישות הן רשימת משאלות</li>
+        <li>משרות כמו Noma: אחרי שהפרויקט באוויר</li>
+        <li>לנתח עוד 10–15 משרות באותה שיטה, כדי לוודא שהדפוס מחזיק</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>האם טבלה היא הדרך הנכונה?</h2>
+  <div class="callout blue">
+    <p>טבלה היא כלי מצוין לאסוף ולהשוות נתונים, ולכן השתמשתי בארבע. אבל ממשרה אחת קשה ללמוד על עצמך. מה שמלמד זה <b>דפוסים שחוזרים</b> בין משרות. שלושה שיפורים לשיטה שלך:</p>
+    <ol class="qs">
+      <li><b>לפצל את האדום לשניים:</b> "לוקח זמן" (ניסיון, תואר) מול "באמת בלתי אפשרי" (למשל מיקום שלא תסכימי לו). רוב מה שנראה כחסם נמצא בקטגוריה הראשונה.</li>
+      <li><b>לא להשאיר שורות בלי צבע.</b> בקבוצת יעל ו־QualityAI נשארו דרישות לא מסומנות (כישורים רכים, סיווג ביטחוני, עבודה בלוד). גם "לא אכפת לי" זו תשובה.</li>
+      <li><b>לעבור לגיליון:</b> שורה לכל דרישה, עם עמודות משרה, מיומנות מנורמלת וצבע. אחרי 15 משרות אפשר לספור אוטומטית אילו מיומנויות חוזרות הכי הרבה.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <h2>שאלות שיחדדו את הניתוח</h2>
+  <p>הנחתי כמה דברים מתוך הצבעים. אם אחד מהם לא נכון, ההמלצות משתנות:</p>
+  <ol class="qs">
+    <li>באיזו שפת תכנות את עובדת היום? (הנחתי שלא Python, כי סימנת "Python ברמה גבוהה" באדום)</li>
+    <li>אין לך תואר ראשון? (הנחתי שכן, כי סימנת אותו באדום)</li>
+    <li>מה התפקיד הנוכחי שלך, והאם יש מקום ליזום בו פרויקט AI?</li>
+    <li>סיווג ביטחוני ועבודה בלוד: רלוונטי בשבילך או לא?</li>
+  </ol>
+</section>
+
+<p class="foot">הניתוח מבוסס על הסימונים במסמך ששיתפת. הספירות כוללות רק דרישות חובה, אלא אם צוין אחרת. ההערכות הן עמדה מקצועית ולא ודאות. כדאי לאמת אותן מול עוד משרות ושיחות עם אנשים בתפקידים האלה.</p>
+
+</div>
+
+</body></html>
